@@ -1,0 +1,4 @@
+[deps]
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
+SimpleWeightedGraphs = "47aef6b3-ad0c-573a-a1e2-d07658019622"
