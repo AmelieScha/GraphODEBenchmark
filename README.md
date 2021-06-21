@@ -1,4 +1,4 @@
-This repo contains code to benchmark the inference of ODE models on graphs usingjulia and python. For inference in julia, Turing will be used; for python, numpyro will be used. 
+This repo contains code to benchmark the inference of ODE models on graphs usingjulia and python. For inference in julia, [Turing](https://github.com/TuringLang/Turing.jl) will be used; for python, [numpyro](https://github.com/pyro-ppl/numpyro) will be used. 
 
 The system used will be: 
 $$
