@@ -10,4 +10,4 @@ $$
 $$
 where $\mathbf{D}$ and $\mathbf{A}$ are the degree and adjacency matrices, respectively. 
 
-The model is version of the Fisher-Kolmogorov–Petrovsky–Piskunov equation defined on a discete domain, namely a graph.
+The model is version of the Fisher-Kolmogorov–Petrovsky–Piskunov equation defined on a discete domain, namely a graph. In this case, we will use a Erdos-Renyi random graph of varying size and connection probability.
