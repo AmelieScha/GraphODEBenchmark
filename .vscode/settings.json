@@ -1,4 +1,4 @@
 {
     "python.pythonPath": "python/env/bin/python",
-    "julia.environmentPath": "/Users/pavanchaggar/Projects/GraphODEBenchmark/julia"
+    "julia.environmentPath": "/home/chaggar/Projects/GraphODEBenchmark/julia"
 }
