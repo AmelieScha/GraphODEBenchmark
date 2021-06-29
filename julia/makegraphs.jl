@@ -10,7 +10,7 @@ function MakeSimpleWeightedGraph(n::Int64, p::Float64)
     GW |> laplacian_matrix |> Array
 end
 
-N = 10
+N = 100
 P = 0.5
 L = MakeSimpleWeightedGraph(N, P)
 
