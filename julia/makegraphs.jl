@@ -11,7 +11,7 @@ function MakeSimpleWeightedGraph(n::Int64, p::Float64)
 end
 
 N = 100
-P = 0.5
+P = 0.1
 L = MakeSimpleWeightedGraph(N, P)
 
 writedlm("graphs/ER-$(N)-05.csv", L, ',')
