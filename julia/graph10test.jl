@@ -4,17 +4,18 @@ using Turing
 using StaticArrays
 using Plots
 
-const SL = readdlm("graphs/ER-10-05.csv", ',', Float64) |> SMatrix{10,10}
+const SL = readdlm("graphs/ER-100-05.csv", ',', Float64)
+const L = readdlm("graphs/ER-100-05.csv", ',', Float64)
 
 function NetworkFKPP(du, u, p, t)
-    du .= -p[1] * SL * u .+ p[2] .* u .* (1 .- u)
+    du .= -p[1] * L * u .+ p[2] .* u .* (1 .- u)
 end
 
 
-u0 = zeros(10)
-u0[5] = 0.1
+u0 = zeros(100)
+u0[50] = 0.1
 
-p = [10.0, 1.5]
+p = [0.05, 1.5]
 
 t_span = (0.0,10.0)
 
@@ -64,7 +65,7 @@ end
 using BenchmarkTools
 
 m = fit(Array(sol), prob);
-@benchmark chain = sample(m, NUTS(0.65), 2_000)
+chain = sample(m, NUTS(0.65), 2_000)
 
 m1 = fit1(Array(sol), prob);
 @benchmark chain1 = sample(m1, NUTS(0.65), 2_000)
@@ -72,7 +73,7 @@ m1 = fit1(Array(sol), prob);
 m2 = fit2(Array(sol), prob);
 @benchmark chain2 = sample(m2, NUTS(0.65), 2_000)
 
-using Zygote, Memoization, DiffEqSensitivity
-Turing.setadbackend(:zygote)
+using ReverseDiff, Memoization
+Turing.setadbackend(:reversediff)
 Turing.setrdcache(true)
 Turing.emptyrdcache()
